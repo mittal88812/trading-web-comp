@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <title>Opt to proced.</title>
+    </head>
+    <body>
+        <link rel="stylesheet" type="text/css" href="trading.css"/>
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+                <a class="navbar-brand" href="#">
+                   Trading Web &Comp.
+                  </a>
+
+                <!-- Links -->
+                  <ul class="navbar-nav">
+
+                    <li class="nav-item right">
+                      <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item right">
+                      <a class="nav-link" href="#">About</a>
+                    </li>
+                    <!-- Navbar text-->
+                  
+                    <li class="nav-item left2">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-warning" data-toggle="modal" id="login1" data-target="#myModal">login</button>   
+                      </div>
+                      
+                    </li>
+                    <li class="nav-item left3">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-success" data-toggle="modal" id="signin1" data-target="#myModal1">signin</button>
+                      </div>
+                      
+                    </li>
+                  </ul>
+                
+                
+                </nav>
+        </div>
+        <br/>
+        
+        <div id="mySidepanel" class="sidepanel">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+          <a href="#">About</a>
+          <a href="#">Services</a>
+          <a href="#">Clients</a>
+          <a href="#">Contact</a>
+        </div>
+        
+        <button class="openbtn" onclick="openNav()">☰</button>  
+        
+        
+        <script>
+        function openNav() {
+          document.getElementById("mySidepanel").style.width = "250px";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidepanel").style.width = "0";
+        }
+        </script>
+        <br/>
+        <br/>
+        <div clsss="container" id="btnc">
+        <button type="button" onclick="check1()" class="btn btn-primary btn-lg">Seller</button>
+        <button type="button" onclick="check2()" class="btn btn-primary btn-lg">Buyer</button>
+      </div><br/> <div id="hide" style="visibility:hidden" class="container alert alert-success alert-dismissible"><button type="button" class="close" data-dismiss="alert">&times</button><h5 id="heading1" style="text-align:center">You must login/signin first to continue.</h5> </div>  
+
+        <div class="container-fluid" id="timeline">
+
+        </div><br/><br/>
+        <div class="conatiner-fluid" id="">
+          <h1 style="text-align:center">FAQ'S Questions</h1>
+          <br>
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" data-toggle="tab" href="ques1">Question</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="ques2">Question</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="ques3">Question</a>
+    </li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div id="ques1" class="container tab-pane active"><br>
+      
+       <h6>Ques.</h6>
+       <p>Ans.</p>  
+    </div>
+    <div id="ques2" class="container tab-pane fade"><br>
+      
+      <h6>Ques.</h6>
+      <p>Ans.</p>   
+    </div>
+    <div id="ques3" class="container tab-pane fade"><br>
+      
+      <h6>Ques.</h6>
+      <p>Ans.</p>   
+    </div>
+  </div>
+
+        </div><br/><br/><hr/>
+        <div class="modal" id="myModal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+        
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h4 class="modal-title">Login-</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+        
+              <!-- Modal body -->
+              <div class="modal-body">
+                <form onsubmit="return validate()" action="#">
+                  
+                   
+                    <label>Name:<sup>*</sup></br><input type="text" id="uname" placeholder="Username.."></label><label id="blur1" style="color:black; visibility:hidden">Username can't be empty.</label></br>
+           
+                    <label>Email:<sup>*</sup></br><input type="email" id="uemai" placeholder="Email.."></label><label id="blur2" style="color:black; visibility:hidden">Email can't be empty.</label></br>
+                    <label>Password:<sup>*</sup></br><input type="password" id="upassw"placeholder="Password.."></label><label id="blur3" style="color:black; visibility:hidden">Neither password can't be empty nor contain less than 5 words.</label></br>
+                     <button type="submit" id="submit" class="btn btn-primary">login</button>
+                </form>
+                <p id="width">Note: (*) This sign indicate that this entry is mandatory.</p>
+              </div>
+        
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+              </div>
+        
+            </div>
+          </div>
+        </div>
+        <div class="modal" id="myModal1">
+          <div class="modal-dialog">
+            <div class="modal-content">
+        
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h4 class="modal-title">Signin</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+        
+              <!-- Modal body -->
+              <div class="modal-body">
+                <form onsubmit="return validate1()" action="#">
+                  
+                  
+                    <label>Name:<sup>*</sup></br><input type="text" id="uname1" placeholder="Username.."></label><label id="Blur1" style="color:black; visibility:hidden">Username can't be empty.</label></br>
+      
+                    <label>Email:<sup>*</sup></br><input type="email" id="uemai1" placeholder="Email.."></label><label id="Blur2" style="color:black; visibility:hidden">Email can't be empty.</label></br>
+                    <label>Password:<sup>*</sup></br><input type="password" id="upassw1"placeholder="Password.."></label><span id="Blur3" style="color:black; visibility:hidden">Can't be empty or less than 5 word.</span></br>
+                    <label>Re-enter Password:<sup>*</sup></br><input type="password" id="repassw1"placeholder="Re-enter Password.."></label><label id="blur4" style="color:white; visibility:hidden">Password doesn't match.</label></br>
+                     <button type="submit" id="submit" class="btn btn-primary">Sign in</button>
+                  
+                </form>
+                <p id="width">Note: (*) This sign indicate that this entry is mandatory.</p>
+              </div>
+        
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+              </div>
+        
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript">
+          var x=0;
+          function validate(){
+           var username=document.getElementById("uname");
+           var useremail=document.getElementById("uemai");
+           var userpassword=document.getElementById("upassw");
+           if(username.value.trim() ==""){
+                 username.style.border="2px solid";
+                 document.getElementById("blur1").style.visibility="visible";
+            return false;
+            }
+       
+       
+            if(useremail.value.trim() ==""){
+                    useremail.style.border="2px solid";
+                    document.getElementById("blur2").style.visibility="visible";
+               return false;
+               }
+               if(userpassword.value.trim() ==""||userpassword.value.length<5){
+                          userpassword.style.border="2px solid";
+                          document.getElementById("blur3").style.visibility="visible";
+                     return false;
+               }
+               else{
+                 x=1;
+                 return true;
+            }
+          }
+         </script>
+         <script type="text/javascript">
+          y=0;
+          function validate1(){
+           var username1=document.getElementById("uname1");
+           var useremail1=document.getElementById("uemai1");
+           var userpassword1=document.getElementById("upassw1");
+           var userrepassword1=document.getElementById("repassw1");
+           if(username1.value.trim() ==""){
+                 username1.style.border="2px solid";
+                 document.getElementById("Blur1").style.visibility="visible";
+            return false;
+            }
+     
+     
+            if(useremail1.value.trim() ==""){
+                    useremail1.style.border="2px solid";
+                    document.getElementById("Blur2").style.visibility="visible";
+               return false;
+               }
+               if(userpassword1.value.trim() ==""||userpassword1.value.length<5){
+                          userpassword1.style.border="2px solid";
+                          document.getElementById("Blur3").style.visibility="visible";
+                     return false;
+               }
+               if(userrepassword1.value!==userpassword1.value){
+                            userrepassword1.style.border="black";
+                            document.getElementById("blur4").style.visibility="visible";
+                       return false;
+                 }
+     
+     
+       else{
+                 y=1;
+                 return true;
+            }
+        }
+
+       </script>
+       <script type="text/javascript">
+         function check1(){
+           if(x==1||y==1){
+            alert("Seller Page");
+            document.getElementById("login1").style.visibility="hidden";
+             document.getElementById("signin1").style.visibility="hidden";
+           }
+           else{
+             document.getElementById("hide").style.visibility="visible";
+             
+           }
+         }
+       </script>
+        <script type="text/javascript">
+          function check2(){
+            if(x==1||y==1){
+              alert("buyer page");
+              document.getElementById("login1").style.visibility="hidden";
+              document.getElementById("signin1").style.visibility="hidden";
+            }
+            else{
+              document.getElementById("hide").style.visibility="visible";
+             
+            }
+          }
+        </script>
+         
+
+    </body>
+</html>

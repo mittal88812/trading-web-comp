@@ -1,0 +1,92 @@
+#para1{
+    width:500px;
+    margin-top:20px;
+    margin-left:auto;
+    margin-right:auto;
+}
+.jumbotron{
+    height:700px;
+    background-color:rgb(235, 173, 42);
+}
+
+#btn1{
+    margin-top:20px;
+}
+#para2{
+    margin-top:20px;
+}
+.right{
+    justify-content: end;
+}
+#para3{
+   font-size:50px;
+}
+#right{
+    margin-left:450px;
+    font-size:23px;
+}
+
+#btn2{
+    width:300px;
+    margin-left: 400px;
+    margin-top:20px;
+}
+#btn3{
+    width:300px;
+    margin-left:400px;
+    margin-top:20px;
+}
+.left2{
+    margin-left:835px;
+}
+.left3{
+    margin-left:7px;
+}
+#hell{
+    margin-top:10px;
+    width:500px;
+    height:1000px;
+}
+.sidepanel .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+  }
+  .sidepanel  {
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    height: 250px;
+    top: 0;
+    left: 0;
+    background-color:white;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    background-color: rgba(0,0,0,0.3);
+    
+  }
+  
+  .sidepanel a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    display: block;
+    transition: 0.3s;
+  }
+  .openbtn{
+      margin-left:17px;
+  }
+  #btnc{
+      margin-left:570px;
+  }
+  #timeline{
+      height:200px;
+      background-color:grey;
+  }
+  #submit{
+      width:100px;
+  }
+ 
